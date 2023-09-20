@@ -94,6 +94,35 @@
         "maintenance": "For full access to this site, you need to login in as an admin."
     }
 }}
+
+<style>
+
+
+  #guestlogin{
+    display : flex;
+    justify-content: center;
+  }
+
+  .btn{
+    background-color:navy;
+    padding: 5px 10px;
+    color:white;
+  }
+
+  #image{
+    width:100%;
+  }
+  .logo{
+    width:15%;
+    height:90%;
+  }
+
+
+
+
+  
+</style>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 {{#cansignup}}
   <div class="sr-only">
     <a href="{{signupurl}}">{{#str}} tocreatenewaccount {{/str}}</a>
@@ -107,8 +136,15 @@
   </div>
 {{/error}}
 
+
+<!--- ini halaman form -->
+
 <form action="{{loginurl}}" method="post" id="login">
 
+
+  <div id="image" >
+      <img class="logo" src="https://i.postimg.cc/xj4HnRH9/stechoq-logo-300x87.png" alt="Contoh Gambar">
+  </div>
   <div class="heading">
     <h3 class="text-center">{{#str}} login_welcome, theme_edumy {{/str}}</h3>
     {{#signup_is_enabled}}
@@ -143,10 +179,12 @@
       <label class="custom-control-label" for="rememberusername1">{{#str}} rememberusername, admin {{/str}}</label>
     {{/rememberusername}}
 
-    <a class="tdu btn-fpswd float-right" href="{{forgotpasswordurl}}">{{#str}} forgot_password, theme_edumy {{/str}}</a>
+    <a class="tdu  float-right" style=" color: navy;" href="{{forgotpasswordurl}}">{{#str}} forgot_password, theme_edumy {{/str}}</a>
   </div>
-
-  <button type="submit" class="btn btn-log btn-block btn-thm2" id="loginbtn">{{#str}}login{{/str}}</button>
+  <div class="submit" style="width: 100%; display:flex; justfy-content:Center;">
+  <button type="submit" class="btn  m-auto" id="loginbtn" style=" width: 40% ;color: white; background-color: navy;">{{#str}}login{{/str}}</button>
+  </div>
+  
 </form>
 
 <div class="mt-3">
@@ -156,14 +194,18 @@
 {{#canloginasguest}}
   <div class="mt-2">
     <p>{{#str}}someallowguest{{/str}}</p>
-    <form action="{{loginurl}}" method="post" id="guestlogin">
+    <form class= "margin-auto" action="{{loginurl}}" method="post" id="guestlogin">
       <input type="hidden" name="logintoken" value="{{logintoken}}">
       <input type="hidden" name="username" value="guest" />
       <input type="hidden" name="password" value="guest" />
-      <button class="btn btn-secondary btn-block" type="submit">{{#str}}loginguest{{/str}}</button>
+      <button class="btn margin-auto" type="submit">{{#str}}loginguest{{/str}}</button>
     </form>
   </div>
 {{/canloginasguest}}
+
+
+
+
 
 {{#hasidentityproviders}}
   <h6 class="mt-2">{{#str}} potentialidps, auth {{/str}}</h6>
