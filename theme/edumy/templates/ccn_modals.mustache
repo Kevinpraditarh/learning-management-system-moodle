@@ -1,9 +1,63 @@
+<style>
+
+
+.custom-size {
+  max-width: 80%;
+}
+
+    .modal-content{
+        background-color:white;
+    }
+
+    #exampleModalCenter{
+    width:100vw;
+
+    }
+
+    #content{
+        background-color:white;
+        color: navy;
+        border-radius: 40px 0px 0px 40px;
+
+
+    }
+
+    #image { 
+        display: flex;
+        justify-content:center;
+        align-items:center
+    }
+
+    #row{
+      background-color:navy;
+      border-radius:10px;
+      width:100%;
+    }
+
+    .modal-header{
+      z-index: 999
+    }
+
+
+</style>
+
+  {{! styling bootstrap css }}
+
+
 <div class="sign_up_modal modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered" role="document">
-    <div class="modal-content">
+
+  <div class="modal-dialog modal-dialog-centered custom-size d-flex align-items-center mx-auto"  role="document">
+
+  {{! tempat editings mulai modal content  }}
+    <div class="modal-content" >
+
+    {{! tombol close }}
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
       </div>
+
+      
+      
       {{!<ul class="sign_up_tab nav nav-tabs" id="myTab" role="tablist">
         <li class="nav-item">
           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
@@ -14,7 +68,12 @@
       </ul>}}
       <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home">
-          <div class="login_form">
+        <div class="row" id="row">
+            {{! tempat gambar }}
+          <div class="col-xl-6" id="image">
+                  <img src="{{{image_url}}}" alt="Contoh Gambar">    
+          </div>
+          <div class="login_form col-xl-6" id="content">
             {{> theme_edumy/ccn_loginform }}
           </div>
         </div>
@@ -23,10 +82,13 @@
         {{! {{> theme_edumy/ccn_registrationform }}
         {{!</div>
         </div>}}
+
+      </div>
       </div>
     </div>
   </div>
 </div>
+
 <div class="search_overlay" id="ccnSearchOverlayWrap">
   <div class="mk-fullscreen-search-overlay" id="mk-search-overlay">
     <a href="#" class="mk-fullscreen-close" id="mk-fullscreen-close-button"><i class="fa fa-times"></i></a>

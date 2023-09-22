@@ -26,8 +26,48 @@ if (!isloggedin() or isguestuser()) {   // Show the block
   } else {
     $strusername = get_string('usernameemail');
   }
-  $_ccnlogin .= "\n" . '<form class="loginform" id="login" method="post" action="' . get_login_url() . '">';
 
+
+  // Internal stylesheet
+  //   $_ccnlogin .= '
+  // <style>
+
+  // .container2{
+  //   height : 100vh;
+  //   width : 100vw;
+  //   background-color:yellow;
+  // }
+  // #image img {
+  //     max-width: 100%;
+  // }
+
+  // .loginform {
+  //     padding: 20px;
+  //     background-color: white;
+  //     border-radius: 10px;
+  //     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  // }
+  // </style>
+  // ';
+
+  // Sisipkan JavaScript Bootstrap
+  //   $_ccnlogin .= '
+  // <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  // <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  // ';
+
+  // // bungkus konten dengan container
+  // $_ccnlogin .= '<div class="container2">';
+  // $_ccnlogin .= '<div class="row">';
+
+  // tambahan konten gambar robot
+  // $_ccnlogin .= '<div class="col-lg-6" id="image">';
+  // $_ccnlogin .= '<img src="https://i.postimg.cc/qvsgPth0/robot.png" alt="Contoh Gambar">';
+  // $_ccnlogin .= '</div>';
+
+  // login form
+  $_ccnlogin .= '<div>';
+  $_ccnlogin .= '<form class="loginform" id="login" method="post" action="' . get_login_url() . '">';
   $_ccnlogin .= '<div class="form-group">';
   $_ccnlogin .= '<input type="text" name="username" placeholder="' . get_string('username', 'theme_edumy') . '" id="login_username" ';
   $_ccnlogin .= ' class="form-control" value="' . s($username) . '" autocomplete="username"/></div>';
@@ -51,6 +91,17 @@ if (!isloggedin() or isguestuser()) {   // Show the block
 
   $_ccnlogin .= '<button type="submit" class="btn btn-log btn-block btn-thm2">' . get_string('login') . '</button>';
   $_ccnlogin .= '<input type="hidden" name="logintoken" value="' . s(\core\session\manager::get_login_token()) . '" />';
+  // akhir lg-6 login form
+  $_ccnlogin .= "</div>\n";
+  // akhir row
+  // $_ccnlogin .= "</div>";
+  // // akhir kontainer 
+  // $_ccnlogin .= "</div>";
+
+
+
+
+
 
   $_ccnlogin .= "</form>\n";
 
