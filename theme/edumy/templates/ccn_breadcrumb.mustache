@@ -1,21 +1,73 @@
+<style>
+
+.breadcrumb_content{
+  display:flex;
+  float:left;
+  flex-direction:column;
+  align-items: left;
+
+
+}
+
+.font{
+  color:white;
+  font-family: Poppins;
+  text-align:left;
+  
+
+}
+
+.btn{
+  font-color:navy;
+}
+
+.isi {
+  display:flex;
+  justify-content: space-between;
+}
+
+img{
+  width:40%;
+}
+</style>
+
+
+
+
+
 {{#breadcrumb_default}}
-  <section class="inner_page_breadcrumb ccn_breadcrumb_default {{{ breadcrumb_classes }}}">
+  <section class="" style="color: blue; background-color:navy; height:150vh; display:flex; justify-content:center;align-items : center ">
     <div class="container">
       <div class="row">
         <div class="col-xl-12 text-center">
-          <div class="breadcrumb_content">
+        {{! isi konten breadcump }}
+        <div class="isi">
+         <div class="breadcrumb_content">
             {{#if_breadcrumb_title}}
-              <h4 class="breadcrumb_title">{{{ pageheading }}}</h4>
+            <h1 class="font"> Stechoq Training Center </h1>
+            <h3 class="font">
+            Technology is bringing a massive wave of <br>
+            evolution on learning things on diferent ways. <br>
+            </h3>
+              <button class="btn btn-warning breadcrumb_title">{{{ pageheading }}}</button>
             {{/if_breadcrumb_title}}
             {{#if_breadcrumb_trail}}
-              {{{ output.navbar }}}
+              
             {{/if_breadcrumb_trail}}
           </div>
+
+          <img src="https://i.postimg.cc/ry57xLRK/learn-1.png" alt="Description of the image">
+        </div>
+         
+
+
         </div>
       </div>
     </div>
   </section>
 {{/breadcrumb_default}}
+
+
 {{#breadcrumb_m}}
   <section class="inner_page_breadcrumb ccn_breadcrumb_m {{{ breadcrumb_classes }}}">
     <div class="container">

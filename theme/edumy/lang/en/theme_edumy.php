@@ -590,6 +590,7 @@ $string['select_no_cat'] = 'Please select number of categories.';
 $string['navigation'] = 'Navigation';
 $string['start'] = 'Start';
 $string['login_welcome'] = 'Login to your accountsss';
+$string['login_welcomes'] = 'Welcome Back';
 $string['login'] = 'Login';
 $string['login_no_account'] = 'Don\'t have an account?';
 $string['signup'] = 'Sign up!';
