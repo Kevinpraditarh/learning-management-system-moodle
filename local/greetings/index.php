@@ -32,6 +32,8 @@
  $PAGE->set_title(get_string('pluginname', 'local_greetings')); // set title site
  $PAGE->set_heading(get_string('pluginname', 'local_greetings')); // set page heading
 
+ $messageform = new \local_greetings\form\message_form();
+
  echo $OUTPUT->header(); // display header (navbar etc.)
 
  if (isloggedin()) {
@@ -40,6 +42,13 @@
    echo get_string('greetinguser', 'local_greetings');
  }
 
+ $messageform->display();
+
+ if ($data = $messageform->get_data()) {
+   $message = required_param('message', PARAM_TEXT);
+
+   echo $OUTPUT->heading($message, 4);
+ }
 
  echo $OUTPUT->footer(); // display footer 
 
