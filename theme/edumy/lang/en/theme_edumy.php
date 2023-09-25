@@ -597,6 +597,7 @@ $string['signup'] = 'Sign up!';
 $string['search_courses'] = 'Search courses...';
 $string['forgot_password'] = 'Forgot Password?';
 $string['or'] = 'Or';
+$string['loginsite'] = 'LoginSite';
 $string['login_register'] = 'Login/Register';
 $string['your_name'] = 'Your name';
 $string['your_name_requirements'] = 'Minimum 3 letters/spaces.';
