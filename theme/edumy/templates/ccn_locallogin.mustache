@@ -1,0 +1,41 @@
+{{> theme_boost/head }}
+            
+<div >
+    <style>
+    .row{
+    background-color:navy;
+    height:100vh;
+    width:100vw;
+        
+    }
+    #content{
+        background-color:white;
+        color: navy;
+        border-radius: 40px 0px 0px 40px;
+        padding:50px;
+        padding-left:150px;
+        padding-right:150px;
+
+    }
+
+    #image { 
+        display: flex;
+        justify-content:center;
+        align-items:center
+    }
+
+  </style>
+  {{! styling bootstrap css }}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <div class="row">
+        <div class="col-xl-6" id="image">
+             <img src="{{{image_url}}}" alt="Contoh Gambar">    
+        </div>
+
+        <div class="col-xl-6 " id="content">
+        {{! output content tulisan login  }}
+                    {{{ output.main_content }}}
+        </div>
+    </div>
+</div>

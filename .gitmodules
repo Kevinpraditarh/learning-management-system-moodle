@@ -1,0 +1,3 @@
+[submodule "blocks/stechoq_topic_summary"]
+	path = blocks/stechoq_topic_summary
+	url = git@gitlab.com:iqrok/stechoq-topic-summary.git
