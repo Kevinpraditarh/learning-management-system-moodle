@@ -4880,10 +4880,10 @@ header.header-nav.menu_style_home_seven .ace-responsive-menu>li.last {
 }
 .footer_middle_area,
 .footer_one {
-  background-color: #151515;
+  background-color: #003666;
 }
 .footer_bottom_area {
-  background-color: #0a0a0a;
+  background-color: #003666;
 }
 .copyright-widget p {
   margin-bottom: 0;
@@ -14759,10 +14759,10 @@ body>.wrapper {
 } */
 .ccn_footer_style_1 .footer_middle_area,
 .ccn_footer_style_1 .footer_one {
-  background-color: [[setting:color_footer_style_1_top]];
+  background-color: #003666;
 }
 .ccn_footer_style_1 .footer_bottom_area {
-  background-color: [[setting:color_footer_style_1_bottom]];
+  background-color: #003666;
 }
 .ccn_footer_style_2 .footer_one.home3,
 .ccn_footer_style_2 .footer_one.home4 {
