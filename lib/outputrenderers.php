@@ -4289,7 +4289,7 @@ EOD;
             $heading = $this->heading($contextheader->heading, $contextheader->headinglevel);
         }
 
-        $showheader = empty($this->page->layout_options['nocontextheader']);
+        $showheader = empty($this->page->layout_options['nocontextheader']); // Liat layout option di file config
         if (!$showheader) {
             // Return the heading wrapped in an sr-only element so it is only visible to screen-readers.
             return html_writer::div($heading, 'sr-only');

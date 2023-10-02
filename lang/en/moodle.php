@@ -1178,7 +1178,7 @@ $string['loginas'] = 'Log in as';
 $string['loginaspasswordexplain'] = '<p>You must enter the special "loginas password" to use this feature.<br />If you do not know it, ask your server administrator.</p>';
 $string['login_failure_logs'] = 'Login failure logs';
 $string['loginguest'] = 'Log in as a guest';
-
+$string['loginsite'] = 'Log in to the site';
 $string['loginsteps'] = 'For full access to this site, you first need to create an account.';
 $string['loginstepsnone'] = '<p>Hi!</p>
 <p>For full access to courses you\'ll need to create yourself an account.</p>
@@ -1943,7 +1943,7 @@ $string['sitedefaultspecified'] = 'Site default ({$a})';
 $string['siteerrors'] = 'Site errors';
 $string['sitefiles'] = 'Site files';
 $string['sitefilesused'] = 'Site files used in this course';
-$string['sitehome'] = 'Site home';
+$string['sitehome'] = 'Module';
 $string['sitelegacyfiles'] = 'Legacy site files';
 $string['sitelogs'] = 'Site logs';
 $string['sitenews'] = 'Site announcements';
