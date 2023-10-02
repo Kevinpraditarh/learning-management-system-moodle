@@ -1206,6 +1206,7 @@ class core_course_renderer extends plugin_renderer_base {
         }
         $content = '';
         $classes = trim('coursebox clearfix '. $additionalclasses);
+        //class
         if ($chelper->get_show_courses() < self::COURSECAT_SHOW_COURSES_EXPANDED) {
             $classes .= ' collapsed';
         }

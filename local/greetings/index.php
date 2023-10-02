@@ -28,7 +28,7 @@
  $context = context_system::instance();
  $PAGE->set_context($context); // set the page context
  $PAGE->set_url('/local/greetings/index.php'); // set the page url
- $PAGE->set_pagelayout('standard'); // set page layout
+ $PAGE->set_pagelayout('modules'); // set page layout
  $PAGE->set_title(get_string('pluginname', 'local_greetings')); // set title site
  $PAGE->set_heading(get_string('pluginname', 'local_greetings')); // set page heading
 

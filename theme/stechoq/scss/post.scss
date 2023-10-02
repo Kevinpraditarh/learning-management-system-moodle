@@ -1,6 +1,20 @@
 body {
     font-family: "Roboto",apple-system,BlinkMacSystemFont,"Segoe UI","Helvetica Neue",Arial,"Noto Sans","Liberation Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+    background-color: $background-color;
 }
+
+a {
+    font-weight: 600;
+}
+
+#page {
+    margin-top: 0; }
+
+#page-header a {
+    // color: red;
+    font-size: 1.2rem;
+}
+    
 #nav-drawer {
     border-top-right-radius: 30px; /* Membuat sudut kanan atas melengkung */
     box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2); /* Bayangan di sisi kanan */
@@ -8,9 +22,8 @@ body {
 }
 
 #nav-drawer .list-group ul {
-    font-size: large;
+    // font-size: large;
     font-weight: 600;
-
 }
 
 [data-region="drawer"] {
@@ -45,4 +58,62 @@ body {
 // .navbar {
 //     width: 1000px;
 // }
+
+// @media (min-width: 768px) {
+// body.drawer-open-left {
+//     margin-left: 255px;
+// }}
+
+.simplesearchform .btn {
+    border: none;
+}
+.simplesearchform .form-control {
+    border: none;
+}
+
+.search_overlay {
+    border: 2px solid #bdbdbd;
+}
+
+.btn-outline-primary {
+    color: #bdbdbd;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ffffff;
+    color: #bdbdbd;
+    font-size: large;
+}
+
+// === STYLING LAYOUT PAGE CONTENT ===
+
+@media (min-width: 576px) {
+    #region-main {
+    border: none;
+}}
+
+    h1, h2, h3, h4, h5, h6,
+    .h1, .h2, .h3, .h4, .h5, .h6 {
+      font-weight: 600;
+      color: $primary; }
+
+.card {
+    border-radius: 8px;
+    border: none;
+}
+
+
+
+
+.course_category_tree {
+    border: 2px solid darkred;
+    
+}
+
+.courses {
+    display: flex;
+    column-count: auto;
+    gap: 40px;
+    flex-wrap: wrap;
+}
 

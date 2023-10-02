@@ -26,7 +26,7 @@
 <nav class="navbar navbar-light bg-white navbar-expand" aria-label="{{#str}}sitemenubar, admin{{/str}}">
     
         <div data-region="drawer-toggle" class="d-inline-block mr-3">
-            <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left mr-1 btn-light bg-gray" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">{{#pix}}i/menubars{{/pix}}<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></button>
+            <button aria-expanded="{{#navdraweropen}}true{{/navdraweropen}}{{^navdraweropen}}false{{/navdraweropen}}" aria-controls="nav-drawer" type="button" class="btn nav-link float-sm-left btn-light bg-gray" data-action="toggle-drawer" data-side="left" data-preference="drawer-open-nav">{{#pix}}i/menubars{{/pix}}<span class="sr-only">{{#str}}sidepanel, core{{/str}}</span></button>
         </div> 
     
 
@@ -43,11 +43,11 @@
     <div class="ml-auto">
         {{{ output.search_box }}}
     </div>
-    <div class="search_overlay ">
-        <a id="search-button-listener" class="mk-search-trigger mk-fullscreen-trigger" href="#">
-          <span id="search-button" ><i style="color: navy;" class="flaticon-magnifying-glass "></i></span>
-          test
-        </a>
+    <div class="search_overlay simplesearchform">
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-primary" type="submit">{{#pix}} a/search, core{{/pix}}</button>
+          </form>
     </div>
     <ul class="nav navbar-nav usernav">
         <!-- search_box -->
