@@ -32,3 +32,8 @@ $string['greetinguserau'] = 'Hello, {$a}.';
 $string['greetinguseres'] = 'Hola, {$a}.';
 $string['greetinguserfj'] = 'Bula, {$a}.';
 $string['greetingusernz'] = 'Kia Ora, {$a}.';
+<<<<<<< HEAD
+=======
+$string['yourmessage'] = 'Your message';
+$string['postedby'] = 'Posted by {$a}.';
+>>>>>>> 0f71545f053dab05bf7b992be00ac88d93c8ed39
