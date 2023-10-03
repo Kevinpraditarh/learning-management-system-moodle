@@ -5,7 +5,9 @@
 
 defined('MOODLE_INTERNAL') || die();
 $templatecontext = [
-  'image_url' => 'https://i.postimg.cc/qvsgPth0/robot.png', //image pada login
+  'image_url' => $CFG->wwwroot . '/theme/edumy/templates/img/robot.png', //image pada locallogin
+  'breadcumb_img' => $CFG->wwwroot . '/theme/edumy/templates/img/learn1.png', //gambar yang ada di breadcump
+  'stechoqlogo' => $CFG->wwwroot . '/theme/edumy/templates/img/logostchoq.png',
   'lang_menu' =>  $langMenu,
   'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
   'output' => $OUTPUT,
