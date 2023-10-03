@@ -1205,7 +1205,7 @@ class core_course_renderer extends plugin_renderer_base {
             $course = new core_course_list_element($course);
         }
         $content = '';
-        $classes = trim('coursebox clearfix '. $additionalclasses);
+        $classes = trim('coursebox clearfix col-3 '. $additionalclasses);
         //class
         if ($chelper->get_show_courses() < self::COURSECAT_SHOW_COURSES_EXPANDED) {
             $classes .= ' collapsed';
@@ -1217,6 +1217,7 @@ class core_course_renderer extends plugin_renderer_base {
             'data-courseid' => $course->id,
             'data-type' => self::COURSECAT_TYPE_COURSE,
         ));
+
 
         $content .= html_writer::start_tag('div', array('class' => 'info'));
         $content .= $this->course_name($chelper, $course);
@@ -1705,7 +1706,7 @@ class core_course_renderer extends plugin_renderer_base {
             $this->page->requires->strings_for_js(array('collapseall', 'expandall'), 'moodle');
         }
 
-        $content .= html_writer::tag('div', $categorycontent, array('class' => 'content'));
+        $content .= html_writer::tag('div', $categorycontent, array('class' => 'content container')); //class untuk content disini
 
         $content .= html_writer::end_tag('div'); // .course_category_tree
 
@@ -1770,7 +1771,7 @@ class core_course_renderer extends plugin_renderer_base {
 
         // Prepare parameters for courses and categories lists in the tree
         $chelper->set_show_courses(self::COURSECAT_SHOW_COURSES_AUTO)
-                ->set_attributes(array('class' => 'category-browse category-browse-'.$coursecat->id));
+                ->set_attributes(array('class' => 'row category-browse category-browse-'.$coursecat->id));
 
         $coursedisplayoptions = array();
         $catdisplayoptions = array();
