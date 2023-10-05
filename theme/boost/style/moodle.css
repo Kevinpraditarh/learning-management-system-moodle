@@ -2399,7 +2399,8 @@ hr {
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0;
-  margin-bottom: 0.5rem; }
+  margin-bottom: 0.5rem; 
+  }
 
 p {
   margin-top: 0;
@@ -2629,14 +2630,16 @@ template {
 h1, h2, h3, h4, h5, h6,
 .h1, .h2, .h3, .h4, .h5, .h6 {
   margin-bottom: 0.5rem;
-  font-weight: 300;
+  font-weight: 600;
+  color: #0f6cbf;
   line-height: 1.2; }
 
 h1, .h1 {
   font-size: 2.34375rem; }
   @media (max-width: 1200px) {
     h1, .h1 {
-      font-size: calc(1.044375rem + 1.7325vw) ; } }
+      font-size: calc(1.044375rem + 1.7325vw) ; 
+     } }
 
 h2, .h2 {
   font-size: 1.875rem; }

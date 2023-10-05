@@ -23,14 +23,14 @@
  * @package course
  */
 
-require_once("../config.php");
-require_once($CFG->dirroot. '/course/lib.php');
+require_once("../config.php");  // mengambil file include pada file config terluar
+require_once($CFG->dirroot. '/course/lib.php'); // path to file http://platform-lms-stechoq/course/lib.php and include that file to this file
 
-$categoryid = optional_param('categoryid', 0, PARAM_INT); // Category id
-$site = get_site();
+$categoryid = optional_param('categoryid', 0, PARAM_INT); // function optional_param berada di moodlelib.php berfungsi untuk mengambil paramater url dan data ketika ada request (POST) pada halaman moodle
+$site = get_site(); // diambil dari datalib.php
 
-if ($CFG->forcelogin) {
-    require_login();
+if ($CFG->forcelogin) { // nilai forcelogin = true sehingga fungsi require_login dijalankan
+    require_login(); // mengecek apakah pengguna sudah login atau belum, kalau belum maka akan didirect ke halaman login
 }
 
 $heading = $site->fullname;

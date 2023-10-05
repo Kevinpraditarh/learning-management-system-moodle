@@ -13,7 +13,11 @@
               <div class="user_profile">
                 <div class="media">
                   <div class="media-body">
-                    <h4 class="mt-0">{{#str}} start, theme_edumy {{/str}}</h4>
+                    {{#logo}}
+                      <a href="{{{ ccnLogoUrl }}}" class="navbar_brand float-left dn-smd">
+                        {{#logo_image}}<img class="logo2 img-fluid" src="{{{headerlogo1}}}{{!output.get_logo_url}}" alt="{{sitename}}"> {{/logo_image}}
+                      </a>
+                      {{/logo}}
                   </div>
                 </div>
               </div>

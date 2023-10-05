@@ -12,3 +12,92 @@
 .dashbord #block-region-side-pre .block {
   border-radius: 24px;
 }
+/* === HEADER === */
+
+@media (min-width: 1200px) {
+  .ccn_context_dashboard header.header-nav.menu_style_home_one.dashbord_pages {
+    background-color: #fff;
+  }
+}
+
+@media only screen and (max-width: 1199.98px) {
+  .mobile-menu .header.stylehome1.dashbord_pages:before {
+    background-image: none;
+    background-color: #fff !important;
+  }
+  .main-menu {
+    display: block !important;
+  }
+}
+
+header.header-nav.menu_style_home_one.dashbord_pages {
+  background-image: none;
+  background-color: #fff;
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+}
+
+/* HEADER MOBILE MENU */
+.mobile-menu,
+#menu {
+  display: none;
+}
+
+/* ======= SIDEBAR =========*/
+
+@media only screen and (max-width: 1280px) {
+  .dashboard_sidebar {
+    width: 230px;
+  }
+
+  .dashboard_main_content:not(.no-sidebar) {
+    padding-left: calc(220px + 20px);
+  }
+}
+
+.dashboard_sidebar {
+  z-index: 1001;
+  padding: 25px 0;
+  border-top-right-radius: 30px; /* Membuat sudut kanan atas melengkung */
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2); /* Bayangan di sisi kanan */
+  background-color: #fff;
+}
+.dashboard_sidebar::before {
+  position: relative;
+}
+
+.media-body {
+  display: flex;
+  /* justify-content: center; */
+  padding: 0 30px;
+}
+.user_profile {
+  margin-bottom: 25px;
+}
+
+body:not(.ccn_header_style_7) .navbar_brand img {
+  max-height: 46px;
+}
+
+.dashbord_nav_list li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 20px;
+  padding: 0;
+}
+
+.dashbord_nav_list li a {
+  color: #003666;
+  font-weight: 600;
+  width: 100%;
+  padding: 0 0 0 30px;
+}
+.dashbord_nav_list li:hover {
+  background-color: #003666;
+  color: #fff;
+  border-radius: 8px;
+}
+
+.dashbord_nav_list li a:hover {
+  color: #fff;
+}

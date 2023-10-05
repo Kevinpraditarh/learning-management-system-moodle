@@ -163,7 +163,7 @@ if (empty($CFG->forcedefaultmymoodle) && $PAGE->user_allowed_editing()) {
 }
 
 echo $OUTPUT->header();
-
+// echo $header;
 if (core_userfeedback::should_display_reminder()) {
     core_userfeedback::print_reminder_block();
 }
