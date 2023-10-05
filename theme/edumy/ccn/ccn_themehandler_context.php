@@ -5,7 +5,6 @@
 
 defined('MOODLE_INTERNAL') || die();
 $templatecontext = [
-
   'image_welcome_card' => $CFG->wwwroot . '/theme/edumy/pix/welcome_card.png',
   'stechoq_copyright' => '© Copyright 2023 STECHOQ',
   'image_url' => $CFG->wwwroot . '/theme/edumy/templates/img/robot.png', //image pada locallogin
