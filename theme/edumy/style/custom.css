@@ -8,10 +8,12 @@
  *
  */
 
+
 /* Block container */
 .dashbord #block-region-side-pre .block {
   border-radius: 24px;
 }
+
 /* === HEADER === */
 
 @media (min-width: 1200px) {
@@ -25,6 +27,7 @@
     background-image: none;
     background-color: #fff !important;
   }
+
   .main-menu {
     display: block !important;
   }
@@ -57,10 +60,13 @@ header.header-nav.menu_style_home_one.dashbord_pages {
 .dashboard_sidebar {
   z-index: 1001;
   padding: 25px 0;
-  border-top-right-radius: 30px; /* Membuat sudut kanan atas melengkung */
-  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2); /* Bayangan di sisi kanan */
+  border-top-right-radius: 30px;
+  /* Membuat sudut kanan atas melengkung */
+  box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
+  /* Bayangan di sisi kanan */
   background-color: #fff;
 }
+
 .dashboard_sidebar::before {
   position: relative;
 }
@@ -70,6 +76,7 @@ header.header-nav.menu_style_home_one.dashbord_pages {
   /* justify-content: center; */
   padding: 0 30px;
 }
+
 .user_profile {
   margin-bottom: 25px;
 }
@@ -92,6 +99,7 @@ body:not(.ccn_header_style_7) .navbar_brand img {
   width: 100%;
   padding: 0 0 0 30px;
 }
+
 .dashbord_nav_list li:hover {
   background-color: #003666;
   color: #fff;
@@ -101,3 +109,96 @@ body:not(.ccn_header_style_7) .navbar_brand img {
 .dashbord_nav_list li a:hover {
   color: #fff;
 }
+
+
+/* bagian breadcump  */
+
+
+* {
+  font-family: Poppins;
+}
+
+.font {
+  color: white;
+  font-family: Poppins;
+  text-align: left;
+
+}
+
+.angka {
+  color: #003666
+}
+
+.desk {
+  color: black
+}
+
+.btn {
+  font-color: #003666;
+
+}
+
+
+.konten1 {
+  border-bottom-left-radius: 15%;
+  /* Radius sudut kiri bawah */
+  border-bottom-right-radius: 15%;
+  /* Radius sudut kanan bawah */
+}
+
+.testi {
+  height: 170px;
+  width: 70vw;
+  position: absolute;
+  bottom: -60px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  background-color: #E1EEF4;
+
+
+}
+
+.wa {
+  height: 60px;
+  width: 10vw;
+  position: absolute;
+  bottom: -8px;
+  left: 100%;
+  transform: translateX(-50%);
+  border-radius: 50px;
+  background-color: #B6D5E6;
+  padding: 10px;
+
+
+}
+
+
+
+
+
+
+
+
+@media screen and (max-width: 990px) {
+
+  .bungkus {
+    padding-top: 40%;
+    max-height: 100%;
+  }
+
+  #imges {
+    max-width: 50%;
+    /* Gambar akan mengecil hingga ukuran maksimum 100% dari lebar parent */
+    height: auto;
+    padding-top: 40px;
+  }
+
+  .font {
+    align-items: center;
+  }
+
+}
+
+
+/* end of breadcump */

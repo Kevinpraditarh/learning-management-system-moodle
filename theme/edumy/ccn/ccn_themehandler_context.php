@@ -10,7 +10,7 @@ $templatecontext = [
   'stechoq_copyright' => '© Copyright 2023 STECHOQ',
   'image_url' => $CFG->wwwroot . '/theme/edumy/templates/img/robot.png', //image pada locallogin
   'breadcumb_img' => $CFG->wwwroot . '/theme/edumy/templates/img/learn1.png', //gambar yang ada di breadcump
-  'stechoqlogo' => $CFG->wwwroot . '/theme/edumy/templates/img/logostchoq.png',
+  'stechoqlogo' => $CFG->wwwroot . '/theme/edumy/templates/img/logostchoq.png', // logo stechoq
   'lang_menu' =>  $langMenu,
   'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
   'output' => $OUTPUT,
