@@ -1,34 +1,6 @@
 <style>
 
-.breadcrumb_content{
-  display:flex;
-  float:left;
-  flex-direction:column;
-  align-items: left;
 
-
-}
-
-.font{
-  color:white;
-  font-family: Poppins;
-  text-align:left;
-  
-
-}
-
-.btn{
-  font-color:navy;
-}
-
-.isi {
-  display:flex;
-  justify-content: space-between;
-}
-
-#img{
-  width:40%;
-}
 </style>
 
 
@@ -36,34 +8,30 @@
 
 
 {{#breadcrumb_default}}
-  <section class="" style="color: blue; background-color:navy; height:150vh; display:flex; justify-content:center;align-items : center ">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12 text-center">
+  <section class="konten1" style="color: blue; background-color:#003666; height:700px; display:flex; justify-content:center;align-items : center ">
+  
+      <div class="row bungkus py-5">
         {{! isi konten breadcump }}
-        <div class="isi">
-         <div class="breadcrumb_content">
+         <div class="isi col-sm-12 col-lg-6 col-md-12 d-flex justify-content-center flex-column align-items-center " >
             {{#if_breadcrumb_title}}
-            <h1 class="font"> Stechoq Training Center </h1>
-            <h3 class="font">
+            <h1 class="font text-center "> Stechoq Training Center </h1>
+            <p class="font text-center">
             Technology is bringing a massive wave of <br>
             evolution on learning things on diferent ways. <br>
-            </h3>
-              <button class="btn btn-warning breadcrumb_title">{{{ pageheading }}}</button>
+            </p>
+
+            <div>
+              <button class="btn btn-sm btn-warning breadcrumb_title">{{{ pageheading }}}</button>
+            </div>
+
             {{/if_breadcrumb_title}}
-            {{#if_breadcrumb_trail}}
-              
-            {{/if_breadcrumb_trail}}
-          </div>
-
-          <img id="img" src="https://i.postimg.cc/ry57xLRK/learn-1.png" alt="Description of the image">
         </div>
-         
 
-
-        </div>
+        <div class="col-md-12 col-sm-12 col-lg-6 px-lg-0 px-5 d-flex justify-content-center flex-column align-items-center ">
+         <img id="imges" src="{{{ breadcumb_img }}}" alt="Description of the image" class="img-fluid">
+        </div>  
       </div>
-    </div>
+{{! konten testi }}  
   </section>
 {{/breadcrumb_default}}
 
