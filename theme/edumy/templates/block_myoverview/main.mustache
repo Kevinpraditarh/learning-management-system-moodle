@@ -22,7 +22,12 @@
     Example context (json):
     {}
 }}
-<div id="block-myoverview-{{uniqid}}" class="my_course_content_container block-myoverview block-cards" data-region="myoverview" role="navigation">
+<div
+  id="block-myoverview-{{ uniqid }}"
+  class="my_course_content_container block-myoverview block-cards"
+  data-region="myoverview"
+  role="navigation"
+>
   <div class="my_course_content mb30">
     <div class="my_course_content_header">
       <div class="col-xl-4">
@@ -30,14 +35,20 @@
           <h4 class="mt10">{{#str}}courses{{/str}}</h4>
         </div>
       </div>
+      <!-- Start - tombol -->
       <div class="col-xl-8">
-        <div class="candidate_revew_select style2 text-right" data-region="filter" aria-label="{{#str}} aria:controls, block_myoverview {{/str}}">
+        <div
+          class="candidate_revew_select style2 text-right"
+          data-region="filter"
+          aria-label="{{#str}} aria:controls, block_myoverview {{/str}}"
+        >
           <ul class="mb0">
             {{> block_myoverview/nav-grouping-selector }}
             {{> block_myoverview/nav-sort-selector }}
           </ul>
         </div>
       </div>
+      <!-- End - tombol -->
     </div>
     <div class="container-fluid p-0">
       {{> block_myoverview/courses-view }}
@@ -45,16 +56,6 @@
   </div>
 </div>
 {{#js}}
-  require(
-  [
-  'jquery',
-  'block_myoverview/main',
-  ],
-  function(
-  $,
-  Main
-  ) {
-  var root = $('#block-myoverview-{{uniqid}}');
-  Main.init(root);
-  });
+require( [ 'jquery', 'block_myoverview/main', ], function( $, Main ) { var root
+= $('#block-myoverview-{{ uniqid }}'); Main.init(root); });
 {{/js}}

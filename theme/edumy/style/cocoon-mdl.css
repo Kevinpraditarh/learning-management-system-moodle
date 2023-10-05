@@ -1330,6 +1330,7 @@ div[class*="block_cocoon_slider"] .ccnBlockControls {
 }
 .page-link {
   color: [[setting:color_primary]];
+  border-radius: 12px;
 }
 .dir-ltr .dir-ltr-hide {
   display: none;
@@ -2115,7 +2116,9 @@ body.pagelayout-mydashboard {
 /* .ccn_context_dashboard .ccnDashBlHd { */
 .ccnDashBlHd {
   border-bottom: 1px solid #eee;
-  padding: 30px;
+  padding: 16px 30px;
+  background-color: #B6D5E6;
+  border-radius: 24px 24px 0 0;
 }
 /* .ccn_context_dashboard .ccnDashBlHd h4 { */
 .ccnDashBlHd h4 {

@@ -21,12 +21,14 @@
  * @copyright  2004 Eloy Lafuente (stronk7) {@link http://stronk7.com}
  * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-class block_calendar_upcoming extends block_base {
+class block_calendar_upcoming extends block_base
+{
 
     /**
      * Initialise the block.
      */
-    public function init() {
+    public function init()
+    {
         $this->title = get_string('pluginname', 'block_calendar_upcoming');
     }
 
@@ -35,10 +37,11 @@ class block_calendar_upcoming extends block_base {
      *
      * @return stdClass the content
      */
-    public function get_content() {
+    public function get_content()
+    {
         global $CFG;
 
-        require_once($CFG->dirroot.'/calendar/lib.php');
+        require_once($CFG->dirroot . '/calendar/lib.php');
 
         if ($this->content !== null) {
             return $this->content;
@@ -64,7 +67,7 @@ class block_calendar_upcoming extends block_base {
 
         $this->content->footer = html_writer::div(
             html_writer::link($url, get_string('gotocalendar', 'block_calendar_upcoming')),
-            'gotocal'
+            'gotocal text-danger'
         );
 
         return $this->content;
@@ -79,12 +82,13 @@ class block_calendar_upcoming extends block_base {
      * @return string|null $content html block content
      * @deprecated since 3.4
      */
-    public static function get_upcoming_content($events, $linkhref = null, $showcourselink = false) {
+    public static function get_upcoming_content($events, $linkhref = null, $showcourselink = false)
+    {
         debugging(
-                'get_upcoming_content() is deprecated. ' .
+            'get_upcoming_content() is deprecated. ' .
                 'Please see block_calendar_upcoming::get_content() for the correct API usage.',
-                DEBUG_DEVELOPER
-            );
+            DEBUG_DEVELOPER
+        );
 
         $content = '';
         $lines = count($events);
@@ -104,8 +108,13 @@ class block_calendar_upcoming extends block_base {
                 $content .= $events[$i]->referer;
             } else {
                 if (!empty($linkhref)) {
-                    $href = calendar_get_link_href(new \moodle_url(CALENDAR_URL . $linkhref), 0, 0, 0,
-                        $events[$i]->timestart);
+                    $href = calendar_get_link_href(
+                        new \moodle_url(CALENDAR_URL . $linkhref),
+                        0,
+                        0,
+                        0,
+                        $events[$i]->timestart
+                    );
                     $href->set_anchor('event_' . $events[$i]->id);
                     $content .= \html_writer::link($href, $events[$i]->name);
                 } else {

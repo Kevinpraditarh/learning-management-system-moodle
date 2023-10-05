@@ -6,6 +6,8 @@
 defined('MOODLE_INTERNAL') || die();
 $templatecontext = [
   'image_url' => 'https://i.postimg.cc/qvsgPth0/robot.png', //image pada login
+  'image_welcome_card' => $CFG->wwwroot . '/theme/edumy/pix/welcome_card.png',
+  'stechoq_copyright' => '© Copyright 2023 STECHOQ',
   'lang_menu' =>  $langMenu,
   'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
   'output' => $OUTPUT,

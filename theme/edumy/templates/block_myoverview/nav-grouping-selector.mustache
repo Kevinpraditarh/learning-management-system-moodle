@@ -29,19 +29,129 @@
 }}
 <li class="list-inline-item">
   <div class="dropdown bootstrap-select show-tick dropup w-auto">
-    <button id="groupingdropdown" type="button" class="btn btn-outline-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" aria-label="{{#str}} aria:groupingdropdown, block_myoverview {{/str}}">
+    <button
+      id="groupingdropdown"
+      type="button"
+      class="btn btn-outline-secondary dropdown-toggle"
+      data-toggle="dropdown"
+      aria-haspopup="true"
+      aria-expanded="false"
+      aria-label="{{#str}} aria:groupingdropdown, block_myoverview {{/str}}"
+    >
       <span class="d-sm-inline-block" data-active-item-text>
         {{#all}}{{#str}} allexcepthidden, theme_edumy {{/str}}{{/all}}
-        {{#inprogress}}{{#str}} inprogress, block_myoverview {{/str}}{{/inprogress}}
-        {{#future}}{{#str}} future, block_myoverview {{/str}}{{/future}}
-        {{#past}}{{#str}} past, block_myoverview {{/str}}{{/past}}
-        {{#favourites}}{{#str}} favourites, block_myoverview {{/str}}{{/favourites}}
-        {{#hidden}}{{#str}} hiddencourses, block_myoverview {{/str}}{{/hidden}}
+        {{#inprogress}}{{#str}} inprogress, block_myoverview
+        {{/str
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }}{{/inprogress}} {{#future}}{{#str}} future, block_myoverview
+        {{/str
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }}{{/future}} {{#past}}{{#str}} past, block_myoverview
+        {{/str
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }}{{/past}} {{#favourites}}{{#str}} favourites, block_myoverview
+        {{/str
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        }}{{/favourites}} {{#hidden}}{{#str}} hiddencourses, block_myoverview
+        {{/str}}{{/hidden}}
       </span>
     </button>
-    <ul class="dropdown-menu" data-show-active-item data-active-item-text aria-labelledby="groupingdropdown">
+    <ul
+      class="dropdown-menu"
+      data-show-active-item
+      data-active-item-text
+      aria-labelledby="groupingdropdown"
+    >
       <li>
-        <a class="dropdown-item {{#all}}active{{/all}}" href="#" data-filter="grouping" data-value="all" data-pref="all" aria-label="{{#str}} allexcepthidden, theme_edumy {{/str}}" aria-controls="courses-view-{{uniqid}}">
+        <a
+          class="dropdown-item {{#all}}active{{/all}}"
+          href="#"
+          data-filter="grouping"
+          data-value="all"
+          data-pref="all"
+          aria-label="{{#str}} allexcepthidden, theme_edumy {{/str}}"
+          aria-controls="courses-view-{{ uniqid }}"
+        >
           {{#str}} allexcepthidden, theme_edumy {{/str}}
         </a>
       </li>
@@ -49,18 +159,41 @@
         <span class="filler">&nbsp;</span>
       </li>
       <li>
-        <a class="dropdown-item {{#inprogress}}active{{/inprogress}}" href="#" data-filter="grouping" data-value="inprogress" data-pref="inprogress" aria-label="{{#str}} aria:inprogress, block_myoverview {{/str}}"
-          aria-controls="courses-view-{{uniqid}}">
+        <a
+          class="dropdown-item {{#inprogress}}active{{/inprogress}}"
+          href="#"
+          data-filter="grouping"
+          data-value="inprogress"
+          data-pref="inprogress"
+          aria-label="{{#str}} aria:inprogress, block_myoverview {{/str}}"
+          aria-controls="courses-view-{{ uniqid }}"
+        >
           {{#str}} inprogress, block_myoverview {{/str}}
         </a>
       </li>
       <li>
-        <a class="dropdown-item {{#future}}active{{/future}}" href="#" data-filter="grouping" data-value="future" data-pref="future" aria-label="{{#str}} aria:future, block_myoverview {{/str}}" aria-controls="courses-view-{{uniqid}}">
+        <a
+          class="dropdown-item {{#future}}active{{/future}}"
+          href="#"
+          data-filter="grouping"
+          data-value="future"
+          data-pref="future"
+          aria-label="{{#str}} aria:future, block_myoverview {{/str}}"
+          aria-controls="courses-view-{{ uniqid }}"
+        >
           {{#str}} future, block_myoverview {{/str}}
         </a>
       </li>
       <li>
-        <a class="dropdown-item {{#past}}active{{/past}}" href="#" data-filter="grouping" data-value="past" data-pref="past" aria-label="{{#str}} aria:past, block_myoverview {{/str}}" aria-controls="courses-view-{{uniqid}}">
+        <a
+          class="dropdown-item {{#past}}active{{/past}}"
+          href="#"
+          data-filter="grouping"
+          data-value="past"
+          data-pref="past"
+          aria-label="{{#str}} aria:past, block_myoverview {{/str}}"
+          aria-controls="courses-view-{{ uniqid }}"
+        >
           {{#str}} past, block_myoverview {{/str}}
         </a>
       </li>
@@ -68,8 +201,15 @@
         <span class="filler">&nbsp;</span>
       </li>
       <li>
-        <a class="dropdown-item {{#favourites}}active{{/favourites}}" href="#" data-filter="grouping" data-value="favourites" data-pref="favourites" aria-label="{{#str}} aria:favourites, block_myoverview {{/str}}"
-          aria-controls="courses-view-{{uniqid}}">
+        <a
+          class="dropdown-item {{#favourites}}active{{/favourites}}"
+          href="#"
+          data-filter="grouping"
+          data-value="favourites"
+          data-pref="favourites"
+          aria-label="{{#str}} aria:favourites, block_myoverview {{/str}}"
+          aria-controls="courses-view-{{ uniqid }}"
+        >
           {{#str}} favourites, block_myoverview {{/str}}
         </a>
       </li>
@@ -77,7 +217,15 @@
         <span class="filler">&nbsp;</span>
       </li>
       <li>
-        <a class="dropdown-item {{#hidden}}active{{/hidden}}" href="#" data-filter="grouping" data-value="hidden" data-pref="hidden" aria-label="{{#str}} aria:hiddencourses, block_myoverview {{/str}}" aria-controls="courses-view-{{uniqid}}">
+        <a
+          class="dropdown-item {{#hidden}}active{{/hidden}}"
+          href="#"
+          data-filter="grouping"
+          data-value="hidden"
+          data-pref="hidden"
+          aria-label="{{#str}} aria:hiddencourses, block_myoverview {{/str}}"
+          aria-controls="courses-view-{{ uniqid }}"
+        >
           {{#str}} hiddencourses, block_myoverview {{/str}}
         </a>
       </li>
