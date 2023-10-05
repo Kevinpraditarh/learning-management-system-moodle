@@ -1103,7 +1103,7 @@ nav button {
 }
 
 header.header-nav {
-  padding: 0 10px;
+  padding: 0 30px;
 }
 
 header.header-nav.dashbord_pages {
@@ -1123,7 +1123,6 @@ header.header-nav a.navbar_brand {
 }
 
 header.header-nav a.navbar_brand:before {
-  background-color: rgba(255, 255, 255, 0.2);
   bottom: 0;
   content: "";
   /* height: 50px; */
@@ -1158,9 +1157,10 @@ header.header-nav.menu_style_home_one.dashbord_pages {
   background-image: -ms-linear-gradient(0deg, [[setting:color_gradient_end]] 0%, [[setting:color_gradient_start]] 100%);
 }
 
-header.header-nav.menu_style_home_one {
+/* garis bawah navbar */
+/* header.header-nav.menu_style_home_one {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
+} */
 
 .ccn_context_frontend header.header-nav.menu_style_home_one.home9,
 .ccn_context_frontend header.header-nav.menu_style_home_one.home10 {
