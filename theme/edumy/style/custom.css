@@ -22,15 +22,22 @@
   }
 }
 
-@media only screen and (max-width: 1199.98px) {
+/* @media only screen and (max-width: 1199.98px) {
   .mobile-menu .header.stylehome1.dashbord_pages:before {
     background-image: none;
     background-color: #fff !important;
-  }
+  } */
 
   .main-menu {
     display: block !important;
   }
+@media only screen and (min-width: 768px){
+.dn-smd {
+    display: block!important;
+}}
+
+.menu-toggle {
+  display: none!important;
 }
 
 header.header-nav.menu_style_home_one.dashbord_pages {
@@ -40,10 +47,16 @@ header.header-nav.menu_style_home_one.dashbord_pages {
 }
 
 /* HEADER MOBILE MENU */
-.mobile-menu,
+
+/* .mobile-menu,
 #menu {
   display: none;
-}
+} */
+
+@media (min-width: 768px){
+.mobile-menu {
+    display: none;
+}}
 
 /* ======= SIDEBAR =========*/
 
