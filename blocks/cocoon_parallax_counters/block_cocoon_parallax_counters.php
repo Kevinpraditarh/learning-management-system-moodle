@@ -153,7 +153,8 @@ class block_cocoon_parallax_counters extends block_base
       }
     }
 
-
+    //definisi pengambilan gambar 
+    $ccnImages_Whatsapp = $CFG->wwwroot . '/theme/edumy/images/walogo.png';
 
     $this->content->text = '
         <style type="text/css">
@@ -268,7 +269,7 @@ class block_cocoon_parallax_counters extends block_base
     <div id="wa-button">
       <a href="https://wa.me/6285226457536" class="whatsapp-button">
         <div class="button-inner">
-          <img src="https://i.postimg.cc/Y96CqVMD/logo-wa.png" alt="WhatsApp Logo">
+          <img src="' . $ccnImages_Whatsapp . '">
           <h2 class="button-label">Whatsapp</h2>
         </div>
       </a>
