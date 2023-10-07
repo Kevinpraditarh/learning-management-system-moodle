@@ -1,17 +1,9 @@
-<style>
-
-
-</style>
-
-
-
-
+<style></style>
 
 {{#breadcrumb_default}}
-  <section class="konten1" style="color: blue; background-color:#003666; height:700px; display:flex; justify-content:center;align-items : center ">
+<!-- <section class="konten1" style="color: blue; background-color:#003666; height:700px; display:flex; justify-content:center;align-items : center ">
   
       <div class="row bungkus py-5">
-        {{! isi konten breadcump }}
          <div class="isi col-sm-12 col-lg-6 col-md-12 d-flex justify-content-center flex-column align-items-center " >
             {{#if_breadcrumb_title}}
             <h1 class="font text-center "> Stechoq Training Center </h1>
@@ -31,76 +23,116 @@
          <img id="imges" src="{{{ breadcumb_img }}}" alt="Description of the image" class="img-fluid">
         </div>  
       </div>
-{{! konten testi }}  
-  </section>
+
+  </section> -->
+
+<section class="rounded-breadcumb p-5 d-flex align-items-center justify-content-center" style="background-color:#003666; height:700px;">
+  <div class="row">
+    <div
+      class="col-md-6 d-flex align-items-center justify-content-center mb-4 mb-md-0"
+    >
+      <div class="text-center text-md-left">
+        <h1 class="text-white">Stechoq Training Center</h1>
+        <p class="text-white">
+          Technology is bringing a massive wave of <br />
+          evolution on learning things on diferent ways. <br />
+        </p>
+        <button class="btn btn-sm btn-warning breadcrumb_title">
+          {{{ pageheading }}}
+        </button>
+      </div>
+    </div>
+
+    <div class="col-md-6 d-flex align-items-center justify-content-center">
+      <img
+        id="imges"
+        src="{{{ breadcumb_img }}}"
+        alt="Description of the image"
+        class="img-fluid"
+      />
+    </div>
+  </div>
+</section>
 {{/breadcrumb_default}}
 
-
 {{#breadcrumb_m}}
-  <section class="inner_page_breadcrumb ccn_breadcrumb_m {{{ breadcrumb_classes }}}">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12 text-center">
-          <div class="breadcrumb_content">
-            {{#if_breadcrumb_title}}
-              <h4 class="breadcrumb_title">{{{ pageheading }}}</h4>
-            {{/if_breadcrumb_title}}
-            {{#if_breadcrumb_trail}}
-              {{{ output.navbar }}}
-            {{/if_breadcrumb_trail}}
-          </div>
+<section
+  class="inner_page_breadcrumb ccn_breadcrumb_m {{{ breadcrumb_classes }}}"
+>
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 text-center">
+        <div class="breadcrumb_content">
+          {{#if_breadcrumb_title}}
+          <h4 class="breadcrumb_title">{{{ pageheading }}}</h4>
+          {{/if_breadcrumb_title}}
+          {{#if_breadcrumb_trail}}
+          {{{ output.navbar }}}
+          {{/if_breadcrumb_trail}}
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {{/breadcrumb_m}}
 {{#breadcrumb_s}}
-  <section class="inner_page_breadcrumb ccn_breadcrumb_s {{{ breadcrumb_classes }}}">
-    <div class="container">
-      <div class="breadcrumb_content">
-        <div class="row">
-          {{#if_breadcrumb_title}}
-            <div class="{{#if_breadcrumb_trail}}col-xl-6{{/if_breadcrumb_trail}}{{^if_breadcrumb_trail}}col-xl-12{{/if_breadcrumb_trail}}">
-              <h4 class="breadcrumb_title">{{{ pageheading }}}</h4>
-            </div>
-          {{/if_breadcrumb_title}}
-          {{#if_breadcrumb_trail}}
-            <div class="{{#if_breadcrumb_title}}col-xl-6{{/if_breadcrumb_title}}{{^if_breadcrumb_title}}col-xl-12{{/if_breadcrumb_title}}">
-              {{{ output.navbar }}}
-            </div>
-          {{/if_breadcrumb_trail}}
+<section
+  class="inner_page_breadcrumb ccn_breadcrumb_s {{{ breadcrumb_classes }}}"
+>
+  <div class="container">
+    <div class="breadcrumb_content">
+      <div class="row">
+        {{#if_breadcrumb_title}}
+        <div
+          class="{{#if_breadcrumb_trail}}col-xl-6{{/if_breadcrumb_trail}}{{^if_breadcrumb_trail}}col-xl-12{{/if_breadcrumb_trail}}"
+        >
+          <h4 class="breadcrumb_title">{{{ pageheading }}}</h4>
         </div>
+        {{/if_breadcrumb_title}}
+        {{#if_breadcrumb_trail}}
+        <div
+          class="{{#if_breadcrumb_title}}col-xl-6{{/if_breadcrumb_title}}{{^if_breadcrumb_title}}col-xl-12{{/if_breadcrumb_title}}"
+        >
+          {{{ output.navbar }}}
+        </div>
+        {{/if_breadcrumb_trail}}
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {{/breadcrumb_s}}
 {{#breadcrumb_xs}}
-  <section class="inner_page_breadcrumb ccn_breadcrumb_s ccn_breadcrumb_xs {{{ breadcrumb_classes }}}">
-    <div class="container">
-      <div class="breadcrumb_content">
-        <div class="row">
-          {{#if_breadcrumb_title}}
-            <div class="{{#if_breadcrumb_trail}}col-xl-6{{/if_breadcrumb_trail}}{{^if_breadcrumb_trail}}col-xl-12{{/if_breadcrumb_trail}}">
-              <h4 class="breadcrumb_title">{{{ pageheading }}}</h4>
-            </div>
-          {{/if_breadcrumb_title}}
-          {{#if_breadcrumb_trail}}
-            <div class="{{#if_breadcrumb_title}}col-xl-6{{/if_breadcrumb_title}}{{^if_breadcrumb_title}}col-xl-12{{/if_breadcrumb_title}}">
-              {{{ output.navbar }}}
-            </div>
-          {{/if_breadcrumb_trail}}
+<section
+  class="inner_page_breadcrumb ccn_breadcrumb_s ccn_breadcrumb_xs {{{ breadcrumb_classes }}}"
+>
+  <div class="container">
+    <div class="breadcrumb_content">
+      <div class="row">
+        {{#if_breadcrumb_title}}
+        <div
+          class="{{#if_breadcrumb_trail}}col-xl-6{{/if_breadcrumb_trail}}{{^if_breadcrumb_trail}}col-xl-12{{/if_breadcrumb_trail}}"
+        >
+          <h4 class="breadcrumb_title">{{{ pageheading }}}</h4>
         </div>
+        {{/if_breadcrumb_title}}
+        {{#if_breadcrumb_trail}}
+        <div
+          class="{{#if_breadcrumb_title}}col-xl-6{{/if_breadcrumb_title}}{{^if_breadcrumb_title}}col-xl-12{{/if_breadcrumb_title}}"
+        >
+          {{{ output.navbar }}}
+        </div>
+        {{/if_breadcrumb_trail}}
       </div>
     </div>
-  </section>
+  </div>
+</section>
 {{/breadcrumb_xs}}
 {{#breadcrumb_hidden}}
-  <section class="inner_page_breadcrumb ccn_breadcrumb_absent">
-    <div class="container">
-      <div class="row">
-        <div class="col-xl-12 text-center">
-        </div>
-      </div>
+<section class="inner_page_breadcrumb ccn_breadcrumb_absent">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-12 text-center"></div>
     </div>
-  </section>
+  </div>
+</section>
 {{/breadcrumb_hidden}}
