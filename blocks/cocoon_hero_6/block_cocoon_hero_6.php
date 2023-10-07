@@ -102,7 +102,7 @@ class block_cocoon_hero_6 extends block_base
     $fs = get_file_storage();
     $ccnImages_background = $CFG->wwwroot . '/theme/edumy/images/ccnBgHuge.png';
     $ccnImages_foreground = $CFG->wwwroot . '/theme/edumy/images/ccnBgMd.png';
-    $ccnImages_teacher = $CFG->wwwroot . '/theme/edumy/images/ccnTeacher.png';
+    $ccnImages_teacher = $CFG->wwwroot . '/theme/edumy/images/hero6_img.png';
     for ($i = 1; $i <= 2; $i++) {
       $image = 'image' . $i;
       $files = $fs->get_area_files($this->context->id, 'block_cocoon_hero_6', 'images', $i, 'sortorder DESC, id ASC', false, 0, 0, 1);
