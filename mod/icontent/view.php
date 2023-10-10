@@ -27,9 +27,9 @@
 
 // Replace icontent with the name of your module and remove this line.
 
-require_once(dirname(dirname(dirname(__FILE__))).'/config.php');
-require_once(dirname(__FILE__).'/locallib.php');
-require_once(dirname(__FILE__).'/lib.php');
+require_once(dirname(dirname(dirname(__FILE__))) . '/config.php');
+require_once(dirname(__FILE__) . '/locallib.php');
+require_once(dirname(__FILE__) . '/lib.php');
 require_once("$CFG->libdir/resourcelib.php"); // Apagar
 
 $id = optional_param('id', 0, PARAM_INT); // Course_module ID, or
@@ -40,9 +40,9 @@ $pageid = optional_param('pageid', 0, PARAM_INT); // Chapter ID
 if ($id) {
     $cm         = get_coursemodule_from_id('icontent', $id, 0, false, MUST_EXIST);
     $course     = $DB->get_record('course', array('id' => $cm->course), '*', MUST_EXIST);
-    $icontent  	= $DB->get_record('icontent', array('id' => $cm->instance), '*', MUST_EXIST);
+    $icontent      = $DB->get_record('icontent', array('id' => $cm->instance), '*', MUST_EXIST);
 } else if ($n) {
-    $icontent  	= $DB->get_record('icontent', array('id' => $n), '*', MUST_EXIST);
+    $icontent      = $DB->get_record('icontent', array('id' => $n), '*', MUST_EXIST);
     $course     = $DB->get_record('course', array('id' => $icontent->course), '*', MUST_EXIST);
     $cm         = get_coursemodule_from_instance('icontent', $icontent->id, $course->id, false, MUST_EXIST);
 } else {
@@ -69,7 +69,7 @@ $edit = icontent_has_permission_edition($allowedit, $edit);
 $pages = icontent_preload_pages($icontent);
 
 if ($allowedit and !$pages) {
-    redirect('edit.php?cmid='.$cm->id); // No pages - add new one.
+    redirect('edit.php?cmid=' . $cm->id); // No pages - add new one.
 }
 
 // Print the page header.
@@ -88,7 +88,7 @@ $renderer->icontent_requires_css();
 $startwithpage  = $pageid ? icontent_get_pagenum_by_pageid($pageid) : icontent_get_startpagenum($icontent, $context);
 $showpage = icontent_get_fullpageicontent($startwithpage, $icontent, $context);
 
-icontent_add_fake_block($pages, $startwithpage, $icontent, $cm, $edit); //Add block sumary
+// icontent_add_fake_block($pages, $startwithpage, $icontent, $cm, $edit); //Add block sumary
 
 // ==========================
 // Content display HTML code
@@ -104,11 +104,12 @@ if ($icontent->intro) {
     echo $OUTPUT->box(format_module_intro('icontent', $icontent, $cm->id), 'generalbox mod_introbox', 'icontentintro');
 }
 // Content box
-echo icontent_full_paging_button_bar($pages, $cm->id, $startwithpage);
+// echo icontent_full_paging_button_bar($pages, $cm->id, $startwithpage);
+echo icontent_simple_paging_button_bar($pages, $cm->id, $startwithpage);
 echo $OUTPUT->box_start('icontent-page', 'idicontentpages');
 echo $showpage->fullpageicontent;
 echo $OUTPUT->box_end();
-echo icontent_simple_paging_button_bar($pages, $cm->id, $startwithpage);
+// echo icontent_simple_paging_button_bar($pages, $cm->id, $startwithpage);
 
 // Finish the page.
 echo $OUTPUT->footer();
