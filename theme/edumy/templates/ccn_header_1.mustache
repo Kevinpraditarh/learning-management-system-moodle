@@ -1,54 +1,23 @@
-<style>
-  /* Corrected CSS for the header element */
-
-  *{
-    color:navy;
-  }
-  header {
-    display:flex;
-    flex-direction:row;
-    margin:auto
-  }
-
-  nav{
-    background-color: white;
-    color: navy; /* Set the text color to white for better visibility on blue background */
-    font-size: 16px;
-    border-radius:70px;
-    display:flex;
-    justify-content : space-between;
-    padding-right:30px;
-     padding-left:30px;
-     margin-top:20px
-     
-  }
-</style>
-
-
-
-
 <header class="ccnHeader1 header-nav menu_style_home_one navbar-scrolltofixed stricky main-menu">
   <div class="container-fluid">
     <!-- Ace Responsive Menu -->
-    <nav >
+    <nav>
       <!-- Menu Toggle btn-->
       <div class="menu-toggle">
-        <img class="nav_logo_img img-fluid"  src="{{{headerlogo1}}}{{!output.get_logo_url}}" alt="{{sitename}}">
+        <img class="nav_logo_img img-fluid" src="{{{headerlogo1}}}{{!output.get_logo_url}}" >
         <button type="button" id="menu-btn">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
       </div>
-
       {{#logo}}
         <a href="{{{ ccnLogoUrl }}}" class="navbar_brand float-left dn-smd">
-          {{#logo_image}}<img class="logo1 img-fluid" src="{{{headerlogo1}}}{{!output.get_logo_url}}" alt="{{sitename}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
-          {{#logo_image}}<img class="logo2 img-fluid" src="{{{headerlogo2}}}{{!output.get_logo_url}}" alt="{{sitename}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
+          {{#logo_image}}<img class="logo1 img-fluid" src="{{{headerlogo2}}}{{!output.get_logo_url}}" alt="{{sitename}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
+          {{#logo_image}}<img class="logo2 img-fluid" src="{{{headerlogo1}}}{{!output.get_logo_url}}" alt="{{sitename}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
          
         </a>
-      {{/logo}}
-
+      {{/logo}} 
       {{#display_library_list}}
         <ul class="mt20 pull-left mr20 ml10">
           <li class="list-inline-item">
@@ -68,7 +37,7 @@
         </ul>
       {{/display_library_list}}
       {{#header_search_bar}}
-        <ul  class="pull-left mt15 mr20 ml10">
+        <ul class="pull-left mt15 mr20 ml10">
           <li class="list-inline-item dn-1366">
             <div class="ht_search_widget">
               <div class="header_search_widget">
@@ -78,18 +47,15 @@
           </li>
         </ul>
       {{/header_search_bar}}
-
-      {{! login register dan searchbar menu }}
-      <ul id="respMenu"  data-menu-style="horizontal" >
+      <ul id="respMenu" class="ace-responsive-menu" data-menu-style="horizontal">
         {{{ output.custom_menu }}}
         {{> theme_edumy/ccn_navbar_user }}
       </ul>
+      {{! isi konten register login dan search bar }}
       <ul class="sign_up_btn pull-right dn-smd mt20">
-      {{! konten icon user pada register login }}
         {{> theme_edumy/ccn_navbar_user_popup }}
         {{#header_search_icon}}
-          <li class="list-inline-item list_s ">
-          {{! konten icon searchbar }}
+          <li class="list-inline-item list_s">
             {{> theme_edumy/ccn_navbar_search_icon }}
           </li>
         {{/header_search_icon}}

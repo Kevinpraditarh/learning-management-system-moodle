@@ -4,6 +4,7 @@
   {{> theme_edumy/ccn_preloader }}
   <div class="wrapper">
     {{> theme_edumy/ccn_dashboard_navbar }}
+    {{! Start - Sidebar }}
     {{^disable_dashboard_drawer}}
       <section class="dashboard_sidebar dn-1199 {{#dashboard_scroll_drawer}} ccn_dashboard_scroll_drawer {{/dashboard_scroll_drawer}}">
         <div class="dashboard_sidebars">
@@ -12,7 +13,11 @@
               <div class="user_profile">
                 <div class="media">
                   <div class="media-body">
-                    <h4 class="mt-0">{{#str}} start, theme_edumy {{/str}}</h4>
+                    {{#logo}}
+                      <a href="{{{ ccnLogoUrl }}}" class="navbar_brand float-left dn-smd">
+                        {{#logo_image}}<img class="logo2 img-fluid" src="{{{headerlogo1}}}{{!output.get_logo_url}}" alt="{{sitename}}"> {{/logo_image}}
+                      </a>
+                      {{/logo}}
                   </div>
                 </div>
               </div>
@@ -39,73 +44,22 @@
         </div>
       </section>
     {{/disable_dashboard_drawer}}
+    {{! End - Sidebar }}
     <div class="our-dashbord dashbord {{#disable_dashboard_drawer}} ccn_dashbord_disable_drawer {{/disable_dashboard_drawer}}">
       <div class="dashboard_main_content">
         <div class="container-fluid">
           <div class="main_content_container">
             <div class="row">
               <div class="col-xl-12">
+                {{! Start - Top Bar }}
+                
+                {{! End - Top Bar}}
+                {{! Start - 4 Menu utama }}
+                
+                {{! End - 4 Menu utama }}
+                {{! Start - Belum tahu }}
                 <div class="row">
-                  <div class="col-lg-12">
-                    <nav class="breadcrumb_widgets {{{breadcrumb_clip_dash}}}" aria-label="breadcrumb mb30">
-                      <h4 class="title float-left">{{{ pageheading }}}</h4>
-                      <ol class="breadcrumb float-right">
-                        {{{ output.navbar }}}
-                      </ol>
-                    </nav>
-                  </div>
-                </div>
-                {{#dash_tabs}}
-                  {{#isloggedin}}
-                    <div class="row">
-                      {{#dash_tablet_1}}
-                        <div class="{{{dash_tab_col_class}}}">
-                          <a href="{{ dash_tablet_1_link }}" class="ff_one">
-                            <div class="detais">
-                              <p>{{{dash_tablet_1_subtitle}}}</p>
-                              {{{dash_tablet_1_title}}}
-                            </div>
-                            <div class="ff_icon"><span class="{{{dash_tablet_1_icon}}}"></span></div>
-                          </a>
-                        </div>
-                      {{/dash_tablet_1}}
-                      {{#dash_tablet_2}}
-                        <div class="{{{dash_tab_col_class}}}">
-                          <a href="{{ dash_tablet_2_link }}" class="ff_one style2">
-                            <div class="detais">
-                              <p>{{{dash_tablet_2_subtitle}}}</p>
-                              {{{dash_tablet_2_title}}}
-                            </div>
-                            <div class="ff_icon"><span class="{{{dash_tablet_2_icon}}}"></span></div>
-                          </a>
-                        </div>
-                      {{/dash_tablet_2}}
-                      {{#dash_tablet_3}}
-                        <div class="{{{dash_tab_col_class}}}">
-                          <a href="{{ dash_tablet_3_link }}" class="ff_one style3">
-                            <div class="detais">
-                              <p>{{{dash_tablet_3_subtitle}}}</p>
-                              {{{dash_tablet_3_title}}}
-                            </div>
-                            <div class="ff_icon"><span class="{{{dash_tablet_3_icon}}}"></span></div>
-                          </a>
-                        </div>
-                      {{/dash_tablet_3}}
-                      {{#dash_tablet_4}}
-                        <div class="{{{dash_tab_col_class}}}">
-                          <a href="{{ dash_tablet_4_link }}" class="ff_one style4">
-                            <div class="detais">
-                              <p>{{{dash_tablet_4_subtitle}}}</p>
-                              {{{dash_tablet_4_title}}}
-                            </div>
-                            <div class="ff_icon"><span class="{{{dash_tablet_4_icon}}}"></span></div>
-                          </a>
-                        </div>
-                      {{/dash_tablet_4}}
-                    </div>
-                  {{/isloggedin}}
-                {{/dash_tabs}}
-                <div class="row">
+                  {{! Start - Layouting }}
                   {{#has_blocks_fullwidth_top}}
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                       {{{ blocks_fullwidth_top }}}
@@ -113,7 +67,7 @@
                   {{/has_blocks_fullwidth_top}}
                   {{#disable_dashboard_drawer}}
                     {{#sidebar_left}}
-                      <div class="{{#sidebar_double}} col-lg-3 col-xl-3 {{/sidebar_double}} {{^sidebar_double}} col-lg-4 col-xl-4 {{/sidebar_double}}">
+                      <div class="{{#sidebar_double}} col-lg-3 col-xl-3 {{/sidebar_double}} {{^sidebar_double}} col-lg-4 col-xl-4 {{/sidebar_double}}">                        
                         <div class="ccn-sidebar-region" aria-label="{{#str}}blocks{{/str}}">
                           {{{ leftblocks }}}
                         </div>
@@ -129,34 +83,49 @@
                   {{^disable_dashboard_drawer}}
                     <div class="{{#sidebar_right}}col-lg-8 col-xl-8{{/sidebar_right}} {{^sidebar_right}}col-lg-12{{/sidebar_right}}">
                   {{/disable_dashboard_drawer}}
+                  {{! End - Layouting }}
+                  {{! Start - Main render }}
+                  <!-- <h1>1</h1> -->
                   {{{ output.standard_top_of_body_html }}}
-                  {{{ output.full_header }}}
-
+                  <!-- {{{ output.full_header }}}                       -->
+                  <!-- <h1>2</h1> -->
                   {{{ output.region_main_settings_menu }}}
                   {{#has_blocks_above_content}}
                     {{{ blocks_above_content }}}
-                  {{/has_blocks_above_content}}
+                  {{/has_blocks_above_content}}                  
                   {{{ output.course_content_header }}}
+                  <div class="mb-5" style="margin-top: -32px;">
+                    <img src="{{{image_welcome_card}}}" alt="welcome-card" class="w-100 d-none d-md-block">
+                  </div>
                   {{{ output.main_content }}}
                   {{{ output.activity_navigation }}}
+                  <!-- <h1>3</h1> -->
                   {{{ output.course_content_footer }}}
+                  {{! End - Main render }}
                   {{#has_blocks_below_content}}
                     {{{ blocks_below_content }}}
                   {{/has_blocks_below_content}}
                 </div>
+                {{! End - Belum tahu }}
+                {{! Start - Right Bar }}
                 {{#sidebar_right}}
                   <div
                     class="{{#disable_dashboard_drawer}} {{#sidebar_double}} col-lg-3 col-xl-3 {{/sidebar_double}} {{^sidebar_double}} col-lg-4 col-xl-4 {{/sidebar_double}}{{/disable_dashboard_drawer}} {{^disable_dashboard_drawer}}col-lg-4 col-xl-4 {{/disable_dashboard_drawer}}">
                     <div class="ccn-sidebar-region" aria-label="{{#str}}blocks{{/str}}">
+                      <!-- <h1>Kanan</h1> -->
                       {{{ sidepreblocks }}}
                     </div>
                   </div>
                 {{/sidebar_right}}
+                {{! End - Right Bar }}
+                {{! Start - Full Bottom }}
                 {{#has_blocks_fullwidth_bottom}}
                   <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     {{{ blocks_fullwidth_bottom }}}
+                    <!-- <h1>fullwith bottom</h1> -->
                   </div>
                 {{/has_blocks_fullwidth_bottom}}
+                {{! End - Full Bottom }}
               </div>
             </div>
           </div>

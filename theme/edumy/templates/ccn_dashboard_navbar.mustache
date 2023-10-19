@@ -20,7 +20,6 @@
             {{#logo_image}}<img class="logo1 img-fluid" src="{{{headerlogo1}}}" alt="{{{sitename}}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
             {{#logo_image}}<img class="logo2 img-fluid" src="{{{headerlogo1}}}" alt="{{{sitename}}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>{{/logo_image}}
           {{/dash_header_white}}
-          {{#logotype}}<span>{{{ sitename }}}</span>{{/logotype}}
         </a>
       {{/logo}}
       {{#display_library_list}}
@@ -55,13 +54,14 @@
         <a href="{{{ ccnLogoUrl }}}" class="mobileBrand">
           {{#logo_image}}
             {{#headerlogo_mobile}}
-              <img class="nav_logo_img img-fluid float-left mt20" src="{{{headerlogo_mobile}}}" alt="{{{sitename}}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>
+              <img class="nav_logo_img img-fluid float-left mt20" src="{{{headerlogo1}}}" alt="{{{sitename}}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>
             {{/headerlogo_mobile}}
             {{^headerlogo_mobile}}
               <img class="nav_logo_img img-fluid float-left mt20" src="{{{headerlogo1}}}" alt="{{{sitename}}}" {{#logo_styles}} style="{{{logo_styles}}}" {{/logo_styles}}>
             {{/headerlogo_mobile}}
           {{/logo_image}}
-          {{#logotype}}<span>{{{sitename}}}</span>{{/logotype}}
+
+          {{#logotype}}<!--<span>{{{sitename}}}</span>-->{{/logotype}}
         </a>
       </div>
       <ul class="menu_bar_home2">
@@ -83,3 +83,4 @@
     </ul>
   </nav>
 </div>
+

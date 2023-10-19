@@ -21,7 +21,7 @@
  * @copyright 1999 onwards Martin Dougiamas  {@link http://moodle.com}
  * @license   http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
-
+$string['loginsite'] = 'LoginSite';
 $string['abouttobeinstalled'] = 'about to be installed';
 $string['accept'] = 'Accept';
 $string['action'] = 'Action';
@@ -167,7 +167,7 @@ $string['autosubscribe'] = 'Forum auto-subscribe';
 $string['autosubscribeno'] = 'No: don\'t automatically subscribe me to forum discussions';
 $string['autosubscribeyes'] = 'Yes: when I post, subscribe me to that forum discussion';
 $string['availability'] = 'Availability';
-$string['availablecourses'] = 'Available courses';
+$string['availablecourses'] = 'Our courses';
 $string['back'] = 'Back';
 $string['backto'] = 'Back to {$a}';
 $string['backtocourselisting'] = 'Back to course listing';
