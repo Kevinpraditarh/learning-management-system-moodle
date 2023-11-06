@@ -13,6 +13,11 @@
   border-radius: 24px;
 }
 
+/* Recently Course */
+.my_course_content {
+  border-radius: 30px
+}
+
 /* === HEADER === */
 
 @media (min-width: 1200px) {
@@ -22,21 +27,23 @@
 }
 
 /* @media only screen and (max-width: 1199.98px) {
-  .mobile-menu .header.stylehome1.dashbord_pages:before {
-    background-image: none;
-    background-color: #fff !important;
-  } */
+    .mobile-menu .header.stylehome1.dashbord_pages:before {
+      background-image: none;
+      background-color: #fff !important;
+    } */
 
-  .main-menu {
+.main-menu {
+  display: block !important;
+}
+
+@media only screen and (min-width: 768px) {
+  .dn-smd {
     display: block !important;
   }
-@media only screen and (min-width: 768px){
-.dn-smd {
-    display: block!important;
-}}
+}
 
 .menu-toggle {
-  display: none!important;
+  display: none !important;
 }
 
 header.header-nav.menu_style_home_one.dashbord_pages {
@@ -45,38 +52,56 @@ header.header-nav.menu_style_home_one.dashbord_pages {
   box-shadow: 5px 0 5px rgba(0, 0, 0, 0.2);
 }
 
-/* HEADER MOBILE MENU */
-
-/* .mobile-menu,
-#menu {
+/* .ace-responsive-menu {
   display: none;
 } */
 
-@media (min-width: 768px){
-.mobile-menu {
-    display: none;
-}
-.mobile-menu .header.stylehome1.dashbord_pages:before {
 
-}}
+/* HEADER MOBILE MENU */
+
+/* .mobile-menu,
+  #menu {
+    display: none;
+  } */
+
+/* .ace-responsive-menu li a.ccn-menu-items {
+    color: #fff !important;
+}
+  
+.ace-responsive-menu li a {
+  color: #000 ;
+} */
+
+@media (min-width: 768px) {
+  .mobile-menu {
+    display: none;
+  }
+
+  .mobile-menu .header.stylehome1.dashbord_pages:before {}
+}
 
 @media only screen and (max-width: 767.98px) {
-.mobile-menu .header.stylehome1.dashbord_pages:before {
-  background-image: none;
-  background-color: #fff!important;
-}
-.menu_bar_home2 li.list-inline-item:first-child:after {
-  background-color: #000!important;
-}
+  .mobile-menu .header.stylehome1.dashbord_pages:before {
+    background-image: none;
+    background-color: #fff !important;
+  }
+
+  .menu_bar_home2 li.list-inline-item:first-child:after {
+    background-color: #000 !important;
+  }
 }
 
 .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger):before {
-background: #000;  
+  background: #000;
 }
 
 .mobile-menu .header a:not(.mobileBrand):not(.ccn-btn-backtocourse):not(.mk-search-trigger) span {
   background: #000;
 }
+
+/*CCN MENU ITEMS*/
+
+
 
 /* ======= SIDEBAR =========*/
 
@@ -149,4 +174,88 @@ body:not(.ccn_header_style_7) .navbar_brand img {
   border-radius: 0px 0px 72px 72px;
 }
 
+@media only screen and (max-width: 767.98px) {
+  .rounded-breadcumb .row {
+    margin-top: 200px;
+  }
+}
+
 /* end of breadcump */
+
+/* CSS untuk mengubah header menjadi bentuk kotak (card-like) */
+.cc_tab_new {
+  background-color: #f5f5f5;
+  /* Warna latar belakang */
+  border: 1px solid var(--navy-n-900, #003666);
+  /* Border */
+  border-radius: 18px;
+  /* Sudut bulat */
+  padding: 10px;
+  /* Ruang internal */
+  margin: 10px 10px 0 0;
+  /* Ruang luar dengan margin kanan dan atas */
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+  /* Efek bayangan */
+  width: 340px;
+  /* Lebar kartu (sesuaikan sesuai kebutuhan) */
+  height: auto;
+  /* Biarkan tinggi menyesuaikan isi */
+  vertical-align: top;
+  /* Aligment vertikal ke atas */
+  overflow: auto;
+  /* Tampilkan bilah geser horizontal jika isi terlalu lebar */
+  background: var(--neutral-neu-0, #FFF);
+}
+
+/* Kode CSS lainnya */
+
+/* kode css di subcourse */
+
+.sub_course {
+  height: auto;
+  /* Biarkan tinggi menyesuaikan isi */
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+
+
+/* detail course */
+
+.activity-display {
+  display: flex !important;
+}
+
+/*custom footet */
+
+.footer_one {
+  padding: 0;
+}
+
+.btn-icontent {
+  /* padding: .375rem .75rem !important; */
+}
+
+/* breadcumb */
+
+.hilang{
+  background-image: url([[setting:heading_bg]]);
+  background-repeat: no-repeat;
+  height: 400px;
+  margin-top: -1px;
+  position: relative;
+  background-image: url([[setting:login_bg]]);
+
+}
+
+/* .inner_page_breadcrumb {
+  display: none;
+} */
+
+
+.fixed-image {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+}
