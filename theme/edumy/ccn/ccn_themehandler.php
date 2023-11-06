@@ -39,16 +39,19 @@ if (is_siteadmin()) {
 } else {
   $user_status = 'role-standard';
 }
-if (method_exists('theme_edumy\output\core_renderer', 'get_theme_image_headerlogo1') && method_exists('theme_edumy\output\core_renderer_maintenance', 'get_theme_image_headerlogo1') && !empty($OUTPUT->get_theme_image_headerlogo1())) {
-  $headerlogo1 = $OUTPUT->get_theme_image_headerlogo1(null, 100);
-} else {
-  $headerlogo1 = $CFG->wwwroot . '/theme/edumy/images/header-logo.png';
-}
-if (method_exists('theme_edumy\output\core_renderer', 'get_theme_image_headerlogo2') && method_exists('theme_edumy\output\core_renderer_maintenance', 'get_theme_image_headerlogo2') && !empty($OUTPUT->get_theme_image_headerlogo2())) {
-  $headerlogo2 = $OUTPUT->get_theme_image_headerlogo2(null, 100);
-} else {
-  $headerlogo2 = $CFG->wwwroot . '/theme/edumy/images/header-logo2.png';
-}
+// if(method_exists('theme_edumy\output\core_renderer', 'get_theme_image_headerlogo1') && method_exists('theme_edumy\output\core_renderer_maintenance', 'get_theme_image_headerlogo1') && !empty($OUTPUT->get_theme_image_headerlogo1())){
+//   $headerlogo1 = $OUTPUT->get_theme_image_headerlogo1(null, 100);
+// } else {
+//   $headerlogo1 = $CFG->wwwroot . '/theme/edumy/images/header-logo.png';
+// }
+$headerlogo1 = $CFG->wwwroot . '/theme/edumy/images/header-logo.png';
+// if(method_exists('theme_edumy\output\core_renderer', 'get_theme_image_headerlogo2') && method_exists('theme_edumy\output\core_renderer_maintenance', 'get_theme_image_headerlogo2') && !empty($OUTPUT->get_theme_image_headerlogo2())){
+//   $headerlogo2 = $OUTPUT->get_theme_image_headerlogo2(null, 100);
+// } else {
+//   $headerlogo2 = $CFG->wwwroot . '/theme/edumy/images/header-logo2.png';
+// }
+$headerlogo2 = $CFG->wwwroot . '/theme/edumy/images/header-logo2.png';
+
 if (method_exists('theme_edumy\output\core_renderer', 'get_theme_image_headerlogo3') && method_exists('theme_edumy\output\core_renderer_maintenance', 'get_theme_image_headerlogo3') && !empty($OUTPUT->get_theme_image_headerlogo3())) {
   $headerlogo3 = $OUTPUT->get_theme_image_headerlogo3(null, 100);
 } else {

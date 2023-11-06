@@ -6,11 +6,8 @@
 defined('MOODLE_INTERNAL') || die();
 $templatecontext = [
   'image_welcome_card' => $CFG->wwwroot . '/theme/edumy/pix/welcome_card.png',
-  'stechoq_copyright' => '© Copyright 2023 STECHOQ',
-  'image_url' => $CFG->wwwroot . '/theme/edumy/templates/img/robot.png', //image pada locallogin
-  'breadcumb_img' => $CFG->wwwroot . '/theme/edumy/images/breadcumb_img.png', //gambar yang ada di breadcump
-  'stechoqlogo' => $CFG->wwwroot . '/theme/edumy/templates/img/logostchoq.png', // logo stechoq
   'lang_menu' =>  $langMenu,
+  'image_url' => $CFG->wwwroot . '/theme/edumy/images/robot3.png', //image pada locallogin
   'sitename' => format_string($SITE->shortname, true, ['context' => context_course::instance(SITEID), "escape" => false]),
   'output' => $OUTPUT,
   'ccnLogoUrl' => $ccnLogoUrl,
